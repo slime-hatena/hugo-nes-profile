@@ -1,0 +1,64 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-bottom: 0.3em solid #ccc;
+
+    background-color: #fff;
+
+    .wrapper {
+        width: 100%;
+        margin: 0;
+        padding: 1em 1em 0em;
+
+        .title {
+            padding-bottom: 0.5em;
+            overflow: hidden;
+
+            h1 {
+                margin: 0;
+                text-align: center;
+                font-size: 1.2em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+                a {
+                    text-decoration: none;
+                    &:link,
+                    &:visited,
+                    &:hover,
+                    &:active {
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        .selector {
+            margin: 0 auto;
+            padding-bottom: 0.6em;
+            font-size: 0.8em;
+        }
+
+        @include mq(pc) {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+
+            .title {
+                margin: auto 0;
+                width: 100%;
+
+                h1 {
+                    text-align: left;
+                }
+            }
+
+            .selector {
+                width: 100%;
+            }
+        }
+    }
+}
