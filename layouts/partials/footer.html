@@ -1,0 +1,23 @@
+<footer>
+    {{ with .Site.Params.footer.content }}
+    <p>{{ . | safeHTML }}</p>
+    {{ end }}
+
+    {{ with .Site.Copyright }}
+    <p>{{ .| safeHTML }}</p>
+    {{ end }}
+
+    {{ if and (.Site.Params.footer.visibleHugoLink) (.Site.Params.footer.visibleThemeLink) }}
+    <p>Powered by <a href="https://github.com/Slime-hatena/hugo-nes-profile" target="_blank"
+            rel="noopener noreferrer">hugo-nes-profiles</a> theme for <a href="https://gohugo.io" target="_blank"
+            rel="noopener noreferrer">Hugo</a>.
+    </p>
+    {{ else if .Site.Params.footer.visibleHugoLink }}
+    <p>Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a>.
+    </p>
+    {{ else if .Site.Params.footer.visibleThemeLink }}
+    <p>Powered by <a href="https://github.com/Slime-hatena/hugo-nes-profile" target="_blank"
+            rel="noopener noreferrer">hugo-nes-profiles</a>.
+    </p>
+    {{ end }}
+</footer>

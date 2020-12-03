@@ -3,3 +3,16 @@
 @import "hero";
 @import "main";
 @import "list";
+@import "footer";
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+
+    .flex-main{
+        flex: 1;
+    }
+}
