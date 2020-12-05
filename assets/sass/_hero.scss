@@ -1,6 +1,6 @@
 #hero{
     display: grid;
-    grid-template-columns: 138px 1fr;
+    grid-template-columns: 134px 1fr;
     grid-template-areas:
         "icon balloon"
         "icon social";
@@ -9,8 +9,7 @@
         grid-area: icon;
         width: 128px;
         height: 128px;
-        margin-left: -6px;
-        margin-right: 10px;
+        margin: 6px 6px 0 -6px;
 
         & > img{
             width: 128px;
@@ -27,7 +26,7 @@
     }
 
     .social{
-        margin: 0 1em 1em;
+        margin: .2em 1em 1em;
     }
 
 
