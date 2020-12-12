@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+{{- partial "hero.html" . -}}
+
+<article>
+    <h2 class="title">{{- .Title -}}</h2>
+
+    <p>{{ .Content }}</p>
+
+    <p>
+        {{ range .Params.tags }}
+        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+    </p>
+
+    <p>
+        Create:
+        <time {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
+            {{ with .Site.Params.dateFormat }}
+            {{- $.Date.Format . -}}
+            {{ else }}
+            {{- .Date.Format "January 2, 2006" -}}
+            {{ end }}
+        </time>
+
+        {{ if ne .Date .Lastmod }}
+        <br>Update:
+        <time {{ printf `datetime="%s"` (.Lastmod.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
+            {{ with .Site.Params.dateFormat }}
+            {{- $.Lastmod.Format . -}}
+            {{ else }}
+            {{- .Lastmod.Format "January 2, 2006" -}}
+            {{ end }}
+        </time>
+        {{ end }}
+    </p>
+
+</article>
+
+{{- end }}

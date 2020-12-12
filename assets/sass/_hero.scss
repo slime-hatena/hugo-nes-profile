@@ -1,0 +1,33 @@
+#hero{
+    display: grid;
+    grid-template-columns: 134px 1fr;
+    grid-template-areas:
+        "icon balloon"
+        "icon social";
+
+    .icon{
+        grid-area: icon;
+        width: 128px;
+        height: 128px;
+        margin: 6px 6px 0 -6px;
+
+        & > img{
+            width: 128px;
+            height: 128px;
+            border-radius: 64px;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+    }
+
+    .window{
+        margin-bottom: .5em;
+        width: 100%;
+    }
+
+    .social{
+        margin: .2em 1em 1em;
+    }
+
+
+}

@@ -1,13 +1,13 @@
 <div class="wrapper">
     <div class="title">
-        <h1><a href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a></h1>
+        <h1><a class="text" href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a></h1>
     </div>
     <div class="selector">
         <div class="nes-select">
-            <select required id="default_select">
+            <select required onChange="location.href=value;">
                 <option value="" disabled selected hidden>Select page...</option>
                 {{ range .Site.Menus.main.ByWeight }}
-                <option value="{{ .URL }}">{{ .Name }}</option>
+                <option value="{{ .URL }}" {{ if eq (.URL) (urls.Parse $.Permalink).Path }}selected{{ end }}>{{ .Name }}</option>
                 {{ end }}
             </select>
         </div>

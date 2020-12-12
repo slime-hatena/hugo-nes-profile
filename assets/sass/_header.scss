@@ -4,7 +4,7 @@ header {
     left: 0;
     right: 0;
     z-index: 1;
-    border-bottom: 0.3em solid #ccc;
+    border-bottom: 4px solid #ccc;
 
     background-color: #fff;
 
@@ -20,20 +20,10 @@ header {
             h1 {
                 margin: 0;
                 text-align: center;
-                font-size: 1.2em;
+                font-size: 1.5em;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-
-                a {
-                    text-decoration: none;
-                    &:link,
-                    &:visited,
-                    &:hover,
-                    &:active {
-                        color: #000;
-                    }
-                }
             }
         }
 
@@ -53,6 +43,7 @@ header {
 
                 h1 {
                     text-align: left;
+                    font-size: 2em;
                 }
             }
 
