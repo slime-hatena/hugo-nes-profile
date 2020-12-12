@@ -4,11 +4,7 @@
 
 {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{ range $pages }}
-<section class="nes-container with-title">
-    <h2 class="title">{{- .Title -}}</h2>
-    <p>{{ .Summary }}</p>
-    <p><a href='{{ .Permalink }}'>Read more →</a></p>
-</section>
+{{- partial "listItem.html" . -}}
 {{ end }}
 
 {{- end }}
