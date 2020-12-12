@@ -1,0 +1,9 @@
+a.text {
+    text-decoration: none;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        color: #000;
+    }
+}
