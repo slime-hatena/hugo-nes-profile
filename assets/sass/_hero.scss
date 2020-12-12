@@ -23,6 +23,19 @@
     .window{
         margin-bottom: .5em;
         width: 100%;
+
+        .names{
+            margin-bottom: .3rem;
+        }
+
+        .name{
+            font-size: 1.5em;
+        }
+
+        .nickname{
+            font-size: 1.2em;
+            color: #666;
+        }
     }
 
     .social{
