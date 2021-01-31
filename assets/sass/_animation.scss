@@ -1,0 +1,23 @@
+@keyframes loader {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    99% {
+        visibility: visible;
+        opacity: 0;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
