@@ -1,0 +1,16 @@
+<script src="https://unpkg.com/@barba/core@2.9.7/dist/barba.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@barba/css@2.1.15/dist/barba-css.umd.min.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BR72E4BY4D"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-BR72E4BY4D');
+</script>
+
+{{ with resources.Get "ts/index.ts" }}
+{{ $js := resources.Get . | js.Build }}
+<script src="{{ $js.Permalink }}"></script>
+{{ end }}

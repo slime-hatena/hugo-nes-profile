@@ -4,8 +4,3 @@
 <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
 {{ $style := resources.Get "sass/base.scss" | toCSS | minify | fingerprint }}
 <link href="{{ $style.RelPermalink }}" rel="stylesheet">
-
-{{ with resources.Get "ts/index.ts" }}
-{{ $js := resources.Get . | js.Build }}
-<script src="{{ $js.Permalink }}"></script>
-{{ end }}

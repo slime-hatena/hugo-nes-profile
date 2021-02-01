@@ -7,16 +7,18 @@
 
 <body>
     <div id="loading"></div>
-    <div class="flex-main">
+    <div class="flex-main" data-barba="wrapper">
         <header>
             {{- partial "header.html" . -}}
         </header>
-        <main>
+        <main data-barba="container" data-barba-namespace="main">
             {{- block "main" . }}{{- end }}
         </main>
         <div id="debug-block"></div>
         </div>
     {{- partial "footer.html" . -}}
+    <div id="debug-block"></div>
+    {{- partial "foot.html" . -}}
 </body>
 
 </html>
