@@ -2,14 +2,7 @@
     <div class="title">
         <h1><a class="text" href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a></h1>
     </div>
-    <div class="selector">
-        <div class="nes-select">
-            <select required onChange="location.href=value;">
-                <option value="" disabled selected hidden>Select page...</option>
-                {{ range .Site.Menus.main.ByWeight }}
-                <option value="{{ .URL }}" {{ if eq (.URL) (urls.Parse $.Permalink).Path }}selected{{ end }}>{{ .Name }}</option>
-                {{ end }}
-            </select>
-        </div>
+    <div class="menu">
+        <button type="button" class="nes-btn"><b>MENU</b></button>
     </div>
 </div>
