@@ -1,7 +1,3 @@
 main{
-    padding: 140px 1em 0;
-
-    @include mq(pc){
-        padding-top: 90px;
-    }
+    padding: 0 1em 0;
 }

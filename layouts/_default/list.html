@@ -1,7 +1,5 @@
 {{ define "main" }}
 
-{{- partial "hero.html" . -}}
-
 {{ if .IsHome }}
 {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{ range $pages }}
