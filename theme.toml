@@ -4,18 +4,18 @@
 name = "Nes Profile"
 license = "MIT"
 licenselink = "https://github.com/Slime-hatena/hugo-nes-profile/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
+description = "A theme that use nes.css to create a self introduction page in hugo."
+homepage = "https://github.com/Slime-hatena/hugo-nes-profile"
 tags = []
 features = []
 min_version = "0.76.3"
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Slime-hatena"
+  homepage = "https://slime-hatena.jp/"
 
 # If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+# [original]
+#   name = ""
+#   homepage = ""
+#   repo = ""
