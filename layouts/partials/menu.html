@@ -1,0 +1,15 @@
+{{/* <div id="menu" class="nes-container is-rounded hide"> */}}
+<div id="menu" class="message-container hide">
+    <div class="menu-header">
+        <span>Select page...</span>
+    </div>
+    {{ range .Site.Menus.main.ByWeight }}
+    <div>
+        <label>
+            <input type="radio" class="nes-radio" name="menu" />
+            <span><a class="text" href="{{ .URL }}">{{ .Name }}</a></span>
+        </label>
+    </div>
+    {{ end }}
+</div>
+<div id="modal" class="hide"></div>

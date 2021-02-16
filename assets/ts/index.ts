@@ -43,6 +43,31 @@ async function init() {
             addLinkOnclickEvents();
         });
 
+    // ボタンを押したらモーダルを出す
+    button.addEventListener('click', e => {
+        menu.classList.remove('hide');
+        modal.classList.remove('hide');
+    }, false);
+
+    // モーダルを押したらモーダルを消す
+    modal.addEventListener('click', e => {
+        menu.classList.add('hide');
+        modal.classList.add('hide');
+    }, false);
+
+    // ラベルを押したらモーダルを消す
+    labels.forEach(label => {
+        let link = label.querySelector('a[href]');
+        if (link.href === window.location.href) {
+            label.querySelector('input').checked = true;
+        }
+        label.addEventListener('click', e => {
+            label.querySelector('input').checked = true;
+            menu.classList.add('hide');
+            modal.classList.add('hide');
+        }, false)
+    })
+
     addLinkOnclickEvents();
 
     await document.fonts.load('10px "jf-dot-mplus10-subset"');
