@@ -2,7 +2,8 @@
     <div class="icon">
         <img alt="Icon" src="{{ .Site.Params.icon }}">
     </div>
-    <div class="window nes-container is-rounded">
+    {{/* <div class="window nes-container is-rounded"> */}}
+    <div class="window message-container">
         <p class="names"><span class="name">{{ .Site.Params.name }}</span>&nbsp;<span
                         class="nickname">{{ .Site.Params.nickname }}</span></p>
         <p>{{ .Site.Params.heroText | safeHTML }}</p>
