@@ -1,5 +1,7 @@
 <section class="nes-container with-title">
     <h2 class="title"><a class="text" href='{{ .Permalink }}'>{{- .Title -}}</a></h2>
     <p>{{ .Summary }}</p>
-    <p><a href='{{ .Permalink }}'>Read more →</a></p>
+    {{- if .Truncated -}}
+    <a href='{{ .RelPermalink }}'>Read more</a>
+    {{- end -}}
 </section>

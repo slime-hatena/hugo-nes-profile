@@ -1,0 +1,31 @@
+#loading {
+    align-items: center;
+    background: #fff;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+
+    &::after {
+        $color: #ffb9dc;
+        animation: loader 0.9s linear infinite;
+        border: 2px solid $color;
+        border-radius: 50%;
+        border-top: 2px solid rgba($color, 0.2);
+        border-right: 2px solid rgba($color, 0.2);
+        content: "";
+        height: 100px;
+        width: 100px;
+    }
+
+    &.hide{
+        animation: fade-out .5s linear 0s;
+        animation-fill-mode: forwards;
+    }
+}
+
+

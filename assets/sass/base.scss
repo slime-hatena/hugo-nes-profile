@@ -1,12 +1,17 @@
 @import "responsive";
+@import "animation";
 @import "font";
+@import "component";
 @import "typography";
+@import "loading";
 @import "header";
 @import "hero";
 @import "main";
 @import "single";
 @import "list";
+@import "menu";
 @import "footer";
+@import "pjax";
 
 body{
     font-family: "jf-dot-mplus10-subset", "Helvetica Neue", Arial, "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", "YuGothic", "游ゴシック体", "メイリオ", "sans-serif";

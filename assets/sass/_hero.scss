@@ -1,15 +1,18 @@
 #hero{
+    padding: 90px 1em 0;
+
     display: grid;
-    grid-template-columns: 134px 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "icon balloon"
-        "icon social";
+        "icon"
+        "balloon"
+        "social";
 
     .icon{
         grid-area: icon;
         width: 128px;
         height: 128px;
-        margin: 6px 6px 0 -6px;
+        margin: 0 auto 1em;
 
         & > img{
             width: 128px;
@@ -17,6 +20,17 @@
             border-radius: 64px;
             image-rendering: pixelated;
             image-rendering: crisp-edges;
+        }
+    }
+
+    @include mq(md){
+        grid-template-columns: 134px 1fr;
+        grid-template-areas:
+            "icon balloon"
+            "icon social";
+
+        .icon{
+            margin: 6px 6px 0 -6px;
         }
     }
 
@@ -36,11 +50,13 @@
             font-size: 1.2em;
             color: #666;
         }
+
+        &>p:last-child{
+            margin-bottom: 0;
+        }
     }
 
     .social{
         margin: .2em 1em 1em;
     }
-
-
 }
