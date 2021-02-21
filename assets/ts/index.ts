@@ -32,16 +32,16 @@ async function init() {
                 label.querySelector('input').checked = true;
             }
         })
-    }); +
+    });
 
-        barba.hooks.after((data) => {
-            if (typeof gtag === 'function') {
-                gtag('config', window.GA_MEASUREMENT_ID, {
-                    page_path: window.location.pathname
-                });
-            }
-            addLinkOnclickEvents();
-        });
+    barba.hooks.after((data) => {
+        if (typeof gtag === 'function') {
+            gtag('config', window.GA_MEASUREMENT_ID, {
+                page_path: window.location.pathname
+            });
+        }
+        addLinkOnclickEvents();
+    });
 
     // ボタンを押したらモーダルを出す
     button.addEventListener('click', e => {
