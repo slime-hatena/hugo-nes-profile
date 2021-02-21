@@ -3,6 +3,7 @@
 
 <head>
     {{- partial "head.html" . -}}
+    {{- partial "extra-head.html" . -}}
 </head>
 
 <body>
@@ -19,6 +20,7 @@
     </div>
     {{- partial "menu.html" . -}}
     {{- partial "footer.html" . -}}
+    <div id="debug-block"></div>
     {{- partial "foot.html" . -}}
 </body>
 
