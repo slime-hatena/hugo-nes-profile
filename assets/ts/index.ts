@@ -3,24 +3,16 @@ const modal = document.getElementById('modal');
 const menu = document.getElementById('menu');
 const labels = [...menu.querySelectorAll('label')];
 
-async function addLinkOnclickEvents() {
-    let links = [...document.querySelectorAll('a[href]')]
-    links.forEach(link => {
-        link.onclick = function (e) {
-            if (this.href === window.location.href) {
-                e.preventDefault();
-                e.stopPropagation();
-                return;
-            }
-        }
-    })
-}
-
 async function init() {
 
     barba.use(barbaCss);
     barba.init({
-        //
+        transitions: [{
+            name: 'self',
+            enter() {
+                // do nothing.
+            },
+        }]
     })
 
     barba.hooks.enter(() => {
@@ -40,7 +32,6 @@ async function init() {
                 page_path: window.location.pathname
             });
         }
-        addLinkOnclickEvents();
     });
 
     // ボタンを押したらモーダルを出す
@@ -67,8 +58,6 @@ async function init() {
             modal.classList.add('hide');
         }, false)
     })
-
-    addLinkOnclickEvents();
 
     await document.fonts.load('10px "jf-dot-mplus10-subset"');
     document.getElementById('loading').classList.add('hide');
