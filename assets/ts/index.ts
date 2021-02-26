@@ -32,6 +32,8 @@ async function init() {
                 page_path: window.location.pathname
             });
         }
+
+        twttr.widgets.load();
     });
 
     // ボタンを押したらモーダルを出す
