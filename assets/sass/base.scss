@@ -3,6 +3,7 @@
 @import "font";
 @import "component";
 @import "typography";
+@import "element";
 @import "loading";
 @import "header";
 @import "hero";
@@ -23,9 +24,5 @@ body{
 
     .flex-main{
         flex: 1;
-    }
-
-    img{
-        max-width: 100%;
     }
 }
