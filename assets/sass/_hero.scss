@@ -6,7 +6,7 @@
     grid-template-areas:
         "icon"
         "balloon"
-        "icons";
+        "links";
 
     .icon{
         grid-area: icon;
@@ -45,7 +45,7 @@
         }
     }
 
-    .icons{
+    .links{
         margin: .2em auto 1em;
         display: inline-block;
     }
@@ -54,13 +54,13 @@
         grid-template-columns: 134px 1fr;
         grid-template-areas:
             "icon balloon"
-            "icon icons";
+            "icon links";
 
         .icon{
             margin: 6px 6px 0 -6px;
         }
 
-        .icons{
+        .links{
             margin: .2em 1em 1em;
         }
     }
