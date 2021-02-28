@@ -48,6 +48,10 @@
     .links{
         margin: .2em auto 1em;
         display: inline-block;
+
+        & > a:not(:last-child){
+            margin-right: .5em;
+        }
     }
 
     @include mq(md){
