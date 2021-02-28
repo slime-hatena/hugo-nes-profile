@@ -6,7 +6,7 @@
     grid-template-areas:
         "icon"
         "balloon"
-        "social";
+        "links";
 
     .icon{
         grid-area: icon;
@@ -45,22 +45,26 @@
         }
     }
 
-    .social{
+    .links{
         margin: .2em auto 1em;
         display: inline-block;
+
+        & > a:not(:last-child){
+            margin-right: .5em;
+        }
     }
 
     @include mq(md){
         grid-template-columns: 134px 1fr;
         grid-template-areas:
             "icon balloon"
-            "icon social";
+            "icon links";
 
         .icon{
             margin: 6px 6px 0 -6px;
         }
 
-        .social{
+        .links{
             margin: .2em 1em 1em;
         }
     }
