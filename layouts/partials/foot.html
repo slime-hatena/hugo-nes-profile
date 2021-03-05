@@ -1,15 +1,21 @@
 <script src="https://unpkg.com/@barba/core"></script>
 <script src="https://cdn.jsdelivr.net/npm/@barba/css@2.1.15/dist/barba-css.umd.min.js"></script>
 
-{{ with .Site.Params.gtag }}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+{{- if eq .Hugo.Environment "development" }}
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-        gtag('config', '{{ . }}');
+    console.log("[hugo] Current environment is development. gtag will be disabled.");
 </script>
-{{ end }}
+{{else}}
+    {{ with .Site.Params.gtag }}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ . }}');
+    </script>
+    {{ end }}
+{{end}}
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
