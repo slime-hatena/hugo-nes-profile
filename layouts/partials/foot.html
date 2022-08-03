@@ -1,7 +1,7 @@
 <script src="https://unpkg.com/@barba/core"></script>
 <script src="https://cdn.jsdelivr.net/npm/@barba/css@2.1.15/dist/barba-css.umd.min.js"></script>
 
-{{- if eq .Hugo.Environment "development" }}
+{{- if eq hugo.Environment "development" }}
 <script>
     console.log("[hugo] Current environment is development. gtag will be disabled.");
 </script>
